@@ -1,0 +1,20 @@
+{
+  "name": "quran",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "twitter-api-v2": "^1.20.2"
+  },
+  "description": "Post on Social Media by Social Media Api"
+}
