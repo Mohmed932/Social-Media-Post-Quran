@@ -6,7 +6,7 @@ import { PostOnMedia } from "./Media/Post.js";
 
 const app = express();
 const PORT = 5000;
-let numberOfPages = 1;
+let numberOfPages = 2;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -29,14 +29,14 @@ app.get("/quran_image/:filename", (req, res) => {
 });
 
 const puplishOnMedia = async () => {
-  // setInterval(async () => {
-  if (numberOfPages <= 604) {
-    const img = `http://localhost:5000/quran_image/${numberOfPages}.png`;
-    const message = `🌸 الورد اليومي - اليوم رقم ${numberOfPages}`;
-    await PostOnMedia(message, img);
-    numberOfPages++;
-  }
-  // }, 1000 * 60 * 60 * 24);
+  setInterval(async () => {
+    if (numberOfPages <= 604) {
+      const img = `https://quran-umber-psi.vercel.app/quran_image/${numberOfPages}.png`;
+      const message = `🌸 الورد اليومي - اليوم رقم ${numberOfPages}`;
+      await PostOnMedia(message, img);
+      numberOfPages++;
+    }
+  }, 1000 * 60 * 60 * 24);
 };
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
