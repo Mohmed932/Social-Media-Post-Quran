@@ -6,7 +6,7 @@ import { PostOnMedia } from "./Media/Post.js";
 
 const app = express();
 const PORT = 5000;
-let numberOfPages = 3;
+let numberOfPages = 1;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
