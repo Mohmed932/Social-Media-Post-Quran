@@ -28,7 +28,7 @@ app.get("/quran_image/:filename", (req, res) => {
   });
 });
 
-app.get("/quran_image/:filename", (req, res) => {
+app.get("/", (req, res) => {
   return res.json({mesage:"this is api for image quran"})
 });
 
