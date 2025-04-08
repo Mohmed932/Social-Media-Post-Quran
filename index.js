@@ -28,10 +28,14 @@ app.get("/quran_image/:filename", (req, res) => {
   });
 });
 
+app.get("/quran_image/:filename", (req, res) => {
+  return res.json({mesage:"this is api for image quran"})
+});
+
 const puplishOnMedia = async () => {
   setInterval(async () => {
     if (numberOfPages <= 604) {
-      const img = `https://quran-umber-psi.vercel.app/quran_image/${numberOfPages}.png`;
+      const img = `https://useful-fedora-asfourah-ce0b49ba.koyeb.app/quran_image/${numberOfPages}.png`;
       const message = `🌸 الورد اليومي - اليوم رقم ${numberOfPages}`;
       await PostOnMedia(message, img);
       numberOfPages++;
