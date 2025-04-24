@@ -16,3 +16,23 @@ export const PostToFacebookPage = async (message, image) => {
     console.error("Error posting on Facebook Page:", error);
   }
 };
+
+export const PosthadithsToFacebookPage = async (message) => {
+  try {
+    const url = `https://graph.facebook.com/${FacebookId}/feed`;
+    const params = new URLSearchParams({
+      access_token: AccessToken,
+      message: message,
+    });
+
+    const req = await fetch(`${url}?${params.toString()}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+    });
+
+    const res = await req.json();
+    console.log("Data:", res);
+  } catch (error) {
+    console.error("Error posting on Facebook Page:", error);
+  }
+};

@@ -4,7 +4,6 @@ dotenv.config();
 export const refreshThreadToken = async () => {
   try {
     const longLivedAccessToken = process.env.ACCESS_TOKEN_THREADS;
-    console.log(longLivedAccessToken); // ضع التوكن هنا
     const url = `https://graph.threads.net/refresh_access_token?grant_type=th_refresh_token&access_token=${longLivedAccessToken}`;
 
     const response = await fetch(url, {

@@ -41,3 +41,13 @@ export const postTweetWithImage = async (text, imageUrl) => {
     console.error("some thing wrong", error);
   }
 };
+
+// نشر تغريدة جديدة
+export const postTextTweet = async (message) => {
+  try {
+    const tweet = await client.v2.tweet(message);
+    console.log("تم نشر التغريدة بنجاح:", tweet);
+  } catch (error) {
+    console.error("حدث خطأ أثناء نشر التغريدة:", error);
+  }
+};

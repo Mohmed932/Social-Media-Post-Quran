@@ -12,8 +12,11 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dayjs": "^1.11.13",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "form-data": "^4.0.2",
+    "node-schedule": "^2.1.1",
     "twitter-api-v2": "^1.20.2"
   },
   "description": "Post on Social Media by Social Media Api"
